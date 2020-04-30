@@ -7,4 +7,4 @@ Express.js: Server for taking user requests and adding/deleting todo items
 Vue.js: Frontend framework used to make ui.
 Node: Javascript runtime environment
 
-<img src=''/>
+<img src='./sample.png'/>
