@@ -3,16 +3,19 @@
         <div id="weather">
             <Weather />
         </div>
-        <div id="todo"></div>
+        <div id="todo">
+            <TodoList />
+        </div>
     </div>
 </template>
 
 <script>
 import Weather from './components/Weather';
+import TodoList from './components/TodoList';
 
 export default {
     name: 'App',
-    components: { Weather },
+    components: { Weather, TodoList },
 };
 </script>
 
@@ -49,21 +52,30 @@ export default {
     font-family: 'Montserrat', sans-serif;
 }
 
+html,
+body {
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: var(--theme-primary);
+}
+
 #app {
+    height: 100%;
     display: grid;
-    grid-template-rows: 100vh;
-    grid-template-columns: 30rem auto;
+    grid-template-rows: 100%;
+    grid-template-columns: minmax(25rem, 35rem) auto;
     background-color: var(--theme-primary);
 }
 
 #weather {
-    grid-row: 1/1;
+    grid-row: 1/2;
     grid-column: 1/2;
     padding: 1.5rem;
 }
 
 #todo {
-    grid-row: 1/1;
+    grid-row: 1/2;
     grid-column: 2/3;
+    padding: 1.5rem;
 }
 </style>

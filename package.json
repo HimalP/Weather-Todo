@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "npm start"
+        "start": "node ./server/index.js",
+        "dev": "nodemon ./server/index.js"
     },
     "author": "Himal Patel",
     "license": "MIT",

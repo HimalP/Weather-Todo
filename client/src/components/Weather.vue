@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="weather-main">
         <input
             type="text"
             placeholder="Enter a city..."
@@ -53,7 +53,6 @@ export default {
                     )
                     .then((res) => {
                         this.weatherData = res.data;
-                        this.setBackground();
                     })
                     .catch((err) => {
                         console.log(err);
@@ -78,7 +77,6 @@ export default {
             .then((res) => {
                 this.weatherData = res.data;
                 this.location = '';
-                this.setBackground();
             })
             .catch((err) => {
                 console.log(err);
@@ -90,16 +88,17 @@ export default {
 </script>
 
 <style scoped>
-div {
+#weather-main {
     background-image: url('../assets/cool.jpg');
     padding: 1rem;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
     background-position: center;
     background-size: cover;
+    height: 100%;
+    min-height: 35rem;
 }
 
 input {
